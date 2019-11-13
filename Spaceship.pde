@@ -21,4 +21,44 @@ class Spaceship extends Floater
     	myDirectionY = 0;
     	myPointDirection = 0;
     }
+    public void setmyPointDirection(double p)
+    {
+    	myPointDirection = p;
+    }
+    public void setmyDirectionX(double x)
+    {
+    	myDirectionX = x;
+    }
+    public void setmyDirectionY(double y)
+    {
+    	myDirectionY = y;
+    }
+    public void setmyCenterX(double x)
+    {
+    	myCenterX = x;
+    }
+    public void setmyCenterY(double y)
+    {
+    	myCenterY = y;
+    }
+    public double getmyCenterX()
+    {
+    	return myCenterX;
+    }
+    public double getmyCenterY()
+    {
+    	return myCenterY;
+    }
+    public double getmyDirectionX()
+    {
+    	return myDirectionX;
+    }
+    public double getmyDirectionY()
+    {
+    	return myDirectionY;
+    }
+    public double getmyPointDirection()
+    {
+    	return myPointDirection;
+    }
 }
