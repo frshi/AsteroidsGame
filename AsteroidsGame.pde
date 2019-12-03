@@ -1,25 +1,30 @@
 //your variable declarations here
 Spaceship ship;
-//Star[] galaxy;
+Star[] galaxy;
 public void setup() 
 {
   //your code here
   ship = new Spaceship();
-  //galaxy = new Star[1000];
+  galaxy = new Star[1000];
   size(1000, 1000);
   background(0);
-  /*
   for(int i = 0; i < galaxy.length ; i++)
+  {
   	galaxy[i] = new Star();
-  */
+  }
 }
 public void draw() 
 {
   //your code here
   background(0);
+    for(int i = 0; i < galaxy.length ; i++)
+  {
+  	galaxy[i].show();
+  }
   ship.move();
   ship.show();
-  //galaxy.show();
+  System.out.println("spdX: " + ship.getmyDirectionX());
+  System.out.println("spdY: " + ship.getmyDirectionY());
 }
 public void keyPressed()
 {
@@ -31,25 +36,15 @@ public void keyPressed()
 		ship.setmyCenterY(Math.random()*1000);
 		ship.setmyDirectionX(0);
 		ship.setmyDirectionY(0);
+		for(int i = 0; i < galaxy.length ; i++)
+  		{
+  			galaxy[i] = new Star();
+  		}
 	}
 	if(key == 'a')
 		ship.turn(-10);
 	if(key == 'd')
 		ship.turn(10);
 	if(key == 'w')
-		ship.accelerate(1);
+		ship.accelerate(0.7);
 }
-/*
-class Star
-{
-	private double posX, posY;
-	Star()
-	{
-		posX = posY = Math.random()*1000;
-	}
-	public void show()
-	{
-		ellipse(posX, posY, Math.random(), Math.random());
-	}
-}
-*/
