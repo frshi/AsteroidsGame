@@ -5,8 +5,8 @@ public void setup()
 {
   //your code here
   ship = new Spaceship();
-  galaxy = new Star[1000];
-  size(1000, 1000);
+  galaxy = new Star[500];
+  size(500, 500);
   background(0);
   for(int i = 0; i < galaxy.length ; i++)
   {
@@ -32,8 +32,8 @@ public void keyPressed()
 	{
 		ship.turn((int)(Math.random()*100));
 		ship.turn((int)(Math.random()*100));
-		ship.setmyCenterX(Math.random()*1000);
-		ship.setmyCenterY(Math.random()*1000);
+		ship.setmyCenterX(Math.random()*500);
+		ship.setmyCenterY(Math.random()*500);
 		ship.setmyDirectionX(0);
 		ship.setmyDirectionY(0);
 		for(int i = 0; i < galaxy.length ; i++)
