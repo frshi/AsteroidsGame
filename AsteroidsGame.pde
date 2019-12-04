@@ -47,4 +47,6 @@ public void keyPressed()
 		ship.turn(10);
 	if(key == 'w')
 		ship.accelerate(0.7);
+	if(key == 's')
+		ship.accelerate(-0.7);
 }
