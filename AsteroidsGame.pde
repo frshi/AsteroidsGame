@@ -41,12 +41,12 @@ public void keyPressed()
   			galaxy[i] = new Star();
   		}
 	}
-	if(keyPressed == 'a')
+	if(key == 'a')
 		ship.turn(-10);
-	if(keyPressed == 'd')
+	if(key == 'd')
 		ship.turn(10);
-	if(keyPressed == 'w')
+	if(key == 'w')
 		ship.accelerate(0.7);
-	if(keyPressed == 's')
+	if(key == 's')
 		ship.accelerate(-0.7);
 }
